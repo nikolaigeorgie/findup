@@ -1,9 +1,22 @@
 var fs   = require('fs'),
   Path   = require('path'),
   util   = require('util'),
-  EE     = require('events').EventEmitter,
-  fsExists = fs.exists ? fs.exists : Path.exists,
-  fsExistsSync = fs.existsSync ? fs.existsSync : Path.existsSync;
+  EE     = require('events').EventEmitter;
+
+function fsExists(file, cb) {
+  fs.access(file, function(err) {
+    cb(err ? false : true);
+  });
+}
+
+function fsExistsSync(file) {
+  try {
+    fs.accessSync(file);
+  } catch(err) {
+    return false;
+  }
+  return true;
+}
 
 module.exports = function(dir, iterator, options, callback){
   return FindUp(dir, iterator, options, callback);
