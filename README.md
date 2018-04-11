@@ -1,11 +1,13 @@
-[![build status](https://secure.travis-ci.org/Filirom1/findup.png)](http://travis-ci.org/Filirom1/findup)
-Find-up
+[![build status](https://secure.travis-ci.org/choojs/findup.png)](http://travis-ci.org/choojs/findup)
+@choojs/findup
 =======
+
+> This is a fork of [Filirom1/findup](https://github.com/Filirom1/findup), pending [#16](https://github.com/Filirom1/findup/pull/16).
 
 ### Install
 
 ```sh
-npm install -g findup
+npm install -g @choojs/findup
 ```
 
 ### Usage
@@ -33,7 +35,7 @@ findup(dir, fileName, options, callback)
 findup(dir, iterator, options, callback) with `iterator(dir, cb)` where cb only accept `true` or `false`
 
 ```js
-var findup = require('findup');
+var findup = require('@choojs/findup');
 
 
 findup(__dirname + '/f/e/d/c/b/a', 'config.json', function(err, dir){
@@ -58,14 +60,14 @@ findup(__dirname + '/f/e/d/c/b/a', function(dir, cb){
 findup(dir, fileName, options)
 
 ```js
-var findup = require('findup');
+var findup = require('@choojs/findup');
 var fup = findup(__dirname + '/f/e/d/c/b/a', 'config.json');
 ```
 
 findup(dir, iterator, options) with `iterator(dir, cb)` where cb only accept `true` or `false`
 
 ```js
-var findup = require('findup');
+var findup = require('@choojs/findup');
 var fup = findup(__dirname + '/f/e/d/c/b/a', function(dir, cb){
   require('path').exists(dir + '/config.json', cb);
 });
@@ -106,7 +108,7 @@ fup.on('end', function(){
 findup(dir, fileName)
 findup(dir, iteratorSync) with `iteratorSync` return `true` or `false`
 ```js
-var findup = require('findup');
+var findup = require('@choojs/findup');
 
 try{
   var dir = findup.sync(__dirname + '/f/e/d/c/b/a', 'config.json'); // dir === '/f/e/d/c'
@@ -117,7 +119,7 @@ try{
 
 #### CLI
 ```js
-npm install -g findup
+npm install -g @choojs/findup
 
 $ cd test/fixture/f/e/d/c/b/a/
 $ findup package.json

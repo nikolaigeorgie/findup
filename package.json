@@ -1,11 +1,11 @@
 {
   "author": "Filirom1 <filirom1@gmail.com>",
-  "name": "findup",
+  "name": "@choojs/findup",
   "description": "Walk up ancester's dir up to root",
   "version": "0.1.5",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Filirom1/findup.git"
+    "url": "https://github.com/choojs/findup.git"
   },
   "bin": {
     "findup": "bin/findup.js"
@@ -28,7 +28,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http  : //www.opensource.org/licenses/MIT"
+      "url": "http://www.opensource.org/licenses/MIT"
     }
   ]
 }
