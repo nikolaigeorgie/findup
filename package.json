@@ -2,7 +2,7 @@
   "author": "Filirom1 <filirom1@gmail.com>",
   "name": "@choojs/findup",
   "description": "Walk up ancester's dir up to root",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/choojs/findup.git"
