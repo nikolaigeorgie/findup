@@ -1,7 +1,7 @@
 {
   "name": "@choojs/findup",
-  "description": "Walk up ancester's dir up to root",
-  "version": "0.2.0",
+  "description": "Find a file by walking up the directory tree",
+  "version": "0.2.1",
   "author": "Filirom1 <filirom1@gmail.com>",
   "bin": {
     "findup": "bin/findup.js"
