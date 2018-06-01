@@ -4,12 +4,14 @@ var fs   = require('fs'),
   EE     = require('events').EventEmitter;
 
 function fsExists(file, cb) {
+  if (!fs.access) return fs.exists(file, cb);
   fs.access(file, function(err) {
     cb(err ? false : true);
   });
 }
 
 function fsExistsSync(file) {
+  if (!fs.accessSync) return fs.existsSync(file);
   try {
     fs.accessSync(file);
   } catch(err) {
